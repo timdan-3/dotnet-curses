@@ -7,6 +7,12 @@ namespace Mindmagma.Curses
 {
     public static partial class NCurses
     {
+        /// <summary>
+        /// Add Char to screen.
+        /// </summary>
+        /// <param name="ch"></param>
+        /// <returns>Return code from Native NCurses.</returns>
+        /// <exception cref="DotnetCursesException">Exception with error code from Native NCurses.</exception>
         public static int AddChar(int ch)
         {
             int result = Native.addch(ch);
